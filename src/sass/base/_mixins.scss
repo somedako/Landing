@@ -1,0 +1,49 @@
+@mixin buttonColor($color, $background, $active) {
+    display: inline-block;
+    color: $color;
+    background: $background;
+    padding: 1.1em 1.4em;
+    border-radius: 10px;
+    outline: none;
+    opacity: 0.8;
+    transition: $background 0.2s linear;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        background: $active;
+    }
+}
+
+@mixin colorText($color, $newColor) {
+    color: $color;
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: $newColor;
+    }
+}
+
+@mixin animation1 {
+    @keyframes spin {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@mixin animation2 {
+    @keyframes spin2 {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+}

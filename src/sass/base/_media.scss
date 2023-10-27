@@ -1,0 +1,136 @@
+@media (max-width: 1400px) {
+    .main-right {
+        right: -40px;
+    }
+
+    .main-left .analitic {
+        right: -35px;
+    }
+
+    .main-left-title h1 {
+        font-size: 1em;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .right {
+        padding: 2em 2.5em 1.4em;
+    }
+
+    .main-left {
+        grid-template-columns: 1fr minmax(200px, 350px);
+        margin-top: 4em;
+    }
+
+    .header-logo {
+        margin-bottom: 0;
+    }
+
+    .main-right {
+        right: 0;
+        margin-top: 45px;
+    }
+
+    .main-left .analitic {
+        top: -10px;
+    }
+
+    .main-left-title h1 {
+        font-size: 2rem;
+    }
+
+    .button-arrow {
+        margin: 0 auto;
+    }
+
+    .main-left .analitic__first .circle2 {
+        right: 120px;
+    }
+
+    .main-left .analitic__orange {
+        right: -17px;
+    }
+
+    .header-nav-right {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 870px) {
+    .main-left {
+        grid-template-columns: 1fr;
+    }
+
+    .main-right {
+        display: none;
+    }
+
+    .header-nav-left {
+        justify-content: space-around;
+    }
+
+    .main-left .analitic {
+        display: none;
+    }
+
+    .main-left-title h1 {
+        text-align: center;
+    }
+
+    .main-left-description {
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .main-left-info {
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .main-left-info img {
+        top: -7px;
+    }
+
+    .popup_body {
+        margin: 10px auto;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header-nav-left-list {
+        padding: 2em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background: $white;
+        width: 250px;
+
+        opacity: 0;
+        transform: translateY(-365px);
+
+        transition: opacity 0.2s linear, transform 0.2s linear;
+
+        &.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+
+            .close {
+                display: block;
+            }
+        }
+    }
+}

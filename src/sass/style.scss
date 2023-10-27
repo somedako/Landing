@@ -1,0 +1,188 @@
+@import 'fonts/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: $darkgray;
+    line-height: 1.4;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.page {
+    min-height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    background: $gray;
+}
+
+.container {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.left {
+    background: $gray;
+    padding: 2em 3.1em 2.4em 3.1em;
+}
+
+.right {
+    background: $purple;
+    padding: 2em 2.5em 3.1em 1.4em;
+    border-radius: 0 15px 15px 0;
+}
+
+.circle-blue {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: $blue;
+}
+
+.circle-green {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #50cfa2;
+}
+
+.circle-orange {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #f4a900;
+}
+
+.circle-pink {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #ffc0cb;
+}
+
+.border-gray {
+    width: 80px;
+    height: 20px;
+    border-radius: 25px;
+    background: $lightgray;
+}
+
+.square-gray {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: $gray;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    color: $black;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 13px;
+}
+
+.contact-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-map {
+    color: $purple;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+
+    @include colorText($purple, blue);
+}
+
+.burger {
+    display: none;
+    position: relative;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+// .bar1.change {
+//     transform: rotate(-45deg) translate(-8px, 6px);
+// }
+
+// .bar2.change {
+//     opacity: 0;
+// }
+
+// .bar3.change {
+//     transform: rotate(45deg) translate(-9px, -8px);
+// }
+
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup.show .popup_body {
+    transform: translate(0, 0);
+}
+
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'base/media';

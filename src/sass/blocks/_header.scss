@@ -1,0 +1,77 @@
+@import '../base/mixins.scss';
+.header {
+    &-nav-left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .close {
+            display: none;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            width: 32px;
+            height: 33px;
+            opacity: 0.3;
+            transition: opacite 0.3s linear;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+
+            &:before,
+            &:after {
+                content: ' ';
+                position: absolute;
+                left: 15px;
+                height: 33px;
+                width: 3px;
+                background-color: #333;
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: 35px;
+
+            font-family: 'SF Pro Text', sans-serif;
+
+            &__item a {
+                @include colorText($darkgray, $blue);
+            }
+        }
+    }
+
+    &-nav-right {
+        display: flex;
+        justify-content: space-between;
+
+        .button-lang {
+            font-family: 'SF Pro Text', sans-serif;
+            font-size: 1rem;
+            @include colorText($bluegray, $black);
+        }
+
+        &__contacts {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            & a {
+                @include colorText($white, $black);
+            }
+
+            .buttonPopup {
+                @include buttonColor($white, $blue, #2a6daa);
+            }
+        }
+    }
+}
